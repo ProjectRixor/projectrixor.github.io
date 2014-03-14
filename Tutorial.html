@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/6866854?s=35">
+    <title>Rixor | Tutorial</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <style>
+    body {
+        background-color: #F5F5F5;
+    }  
+    </style>
+    <script type='text/javascript'>
+        $(document).ready(function () {
+         if ($("[rel=tooltip]").length) {
+         $("[rel=tooltip]").tooltip();
+         }
+        });
+    </script>
+  </head>
+
+  <body style="padding-top: 60px;">
+    <div class="container">
+        
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://github.com/ProjectRixor"><img src="https://avatars2.githubusercontent.com/u/6866854?s=20"> Rixor</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider"></li>
+            <li rel="tooltip" data-placement="bottom" title="Main Site"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+            <li class="active" rel="tooltip" data-placement="bottom" title="How to setup Rixor"><a href="Tutorial.html"><i class="fa fa-info-circle"></i> Tutorial</a></li>
+            <li rel="tooltip" data-placement="bottom" title="Full Rixor Documentation"><a href="Docs.html"><i class="fa fa-book"></i> Docs</a></li>
+            <li rel="tooltip" data-placement="bottom" title="View Code"><a href="https://github.com/ProjectRixor/Rixor"><i class="fa fa-code"></i> Code</a></li>
+            </ul>
+            <p class="navbar-text navbar-right"><a href="https://github.com" class="navbar-link"><i class="fa fa-github"></i> Github</a></p>
+            <p></p>
+        </div>
+      </div>
+    </div>
+    <!--Navbar End / Start of the content-->
+        <div class="alert alert-warning">
+        <p><strong><i class="fa fa-exclamation-circle"></i> Important</strong> Rixor requires Java 7!</p>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">General Info</h1>
+            </div>
+            <div class="panel-body">
+                <p>Overcast Scrimmage plugin utilising the OCN XML system!<br/>
+                    This plugin is a fork of ParaPGM by ParaPenguin. Thanks to him, we have the base for this plugin</p>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">1. Getting the libraries you need</h1>
+            </div>
+            <div class="panel-body">
+                <p>
+                Rixor requires a few libraries, these are pretty easy to setup. Where your craftbukkit.jar is located, make a folder called "libs", and add <a href="http://scrimmage1.teamloading.com/dom4j.jar">dom4j</a> to it. Also, make sure to download BarAPI and place it as a plugin inside of your plugins folder. You can download BarAPI from the release section, located next to braches and commits at the top of the repo.
+                </p>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">2. Creating and adding to the maps repository</h1>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Before you can go any further, you must make sure that your Maps repository contains AT LEAST 1 map, without this the plugin will have a little cry and fail to load correctly.
+                    You can see the format of the repository <a href="https://maps.oc.tc/">here</a>. Those steps are pretty easy and no modifications should be needed to setup your server, as the map.xml is read just like PGM would!
+                    The maps repository should be a folder named 'maps' in the root of the server folder. (This is the same location as the server jar.)
+                </p>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">3. To recap</h1>
+            </div>
+            <div class="panel-body">
+                <p>
+                Make sure to have a folder in your server root called <strong>libs</strong>. This is where you will put the <a href="http://scrimmage1.teamloading.com/dom4j.jar">dom4j</a> library that you can download from the website or from any one of the release tags. After this, download BarAPI from the release tag and include it in your plugins folder as a plugin. Next, make sure to have a <strong>maps</strong> folder where you will put the map and the xml. Make sure the xml file is inside of the map folder, where you see the region folder and the level.dat. Oh, and don't forget the actual Rixor plugin, which you can download from the release section, as always
+                </p>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">4. Config</h1>
+            </div>
+            <div class="panel-body">
+                <p>
+                Your config.yml (<em class="text-info">/plugins/Rixor/config.yml</em>) should look like this:</p>
+                    <pre>team: TeamName<br/>rotation:<br/>- Map 1<br/>- Map 2<br/>- Map 3<br/></pre>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">Compiling your own version of ParaPGM <em>(for developers only)</em></h1>
+            </div>
+            <div class="panel-body">
+                <p>First things first, you're going to need to download and <strong>install</strong> <a href="http://projectlombok.org/" title="Project Lombok">Lombok</a> onto Eclipse or IntelliJ, this is so that the methods work. Make sure you restart Eclipse or IntelliJ after install <em>cough</em> <em>cough</em></p>
+
+<p>Next, you're going to need to import the following jars into your project!</p>
+
+<ul>
+<li><a href="http://projectlombok.org/" title="Project Lombok">Lombok</a></li>
+</ul><p>You can get the rest of the jars from Maven. </p>
+
+<p>After that, export the plugin and you're ready to roll! Just add it to your plugins folder, and follow the setup process below.</p>
+
+<h3>2. Getting the libraries you need</h3>
+
+<p>Rixor requires a few libraries, these are pretty easy to setup.
+Where your craftbukkit.jar is located, make a folder called "<strong>libs</strong>", and add <a href="http://scrimmage1.teamloading.com/dom4j.jar" title="dom4j">dom4j</a> to it.
+Also, make sure to download BarAPI and place it as a plugin inside of your plugins folder. You can download BarAPI from the release section, located next to braches and commits at the top of the repo. </p>
+
+            </div>
+        </div>
+        
+    </div><!-- /Main container -->
+  </body>
+</html>
