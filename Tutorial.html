@@ -69,35 +69,57 @@
         
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h1 class="panel-title">1. Getting the libraries you need</h1>
+                <h1 class="panel-title">1. Downloading the files</h1>
             </div>
             <div class="panel-body">
                 <p>
-                Rixor requires a few libraries, these are pretty easy to setup. Where your craftbukkit.jar is located, make a folder called "libs", and add <a href="http://scrimmage1.teamloading.com/dom4j.jar">dom4j</a> to it. Also, make sure to download BarAPI and place it as a plugin inside of your plugins folder. You can download BarAPI from the release section, located next to braches and commits at the top of the repo.
+                    Before you can setup your server, you will need to download some files. Here is a list.<br>
+                    <strong>BarAPI.jar</strong> = Download at the <a href="https://github.com/ProjectRixor/Rixor/releases">Releases</a> section of this GitHub.<br>
+                    <strong>Dom4j.jar</strong> = Download at the <a href="https://github.com/ProjectRixor/Rixor/releases">Releases</a> section of this GitHub.<br>
+                    <strong>Rixor.jar</strong> = Download at the <a href="https://github.com/ProjectRixor/Rixor/releases">Releases</a> section of this GitHub.<br>
+                    <strong>WorldEdit</strong> = <a href="http://dev.bukkit.org/bukkit-plugins/worldedit/">http://dev.bukkit.org/bukkit-plugins/worldedit/</a>
                 </p>
             </div>
         </div>
         
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h1 class="panel-title">2. Creating and adding to the maps repository</h1>
+                <h1 class="panel-title">2. Getting the libraries you need</h1>
+            </div>
+            <div class="panel-body">
+                <p>
+                    First, place the BarAPI.jar in the "plugins" folder in your server folder.<br>
+                    It would look something like this:<br>
+                    <em class="text-info">.../Server Folder/plugins/BarAPI.jar</em><hr/>
+                    Then, make a folder named "libs" in your server folder then place the Dom4j.jar in that folder.<br>
+                    It would look something like this:<br>
+                    <em class="text-info">.../Server Folder/libs/Dom4j.jar</em><hr/>
+                    Then, place the Rixor.jar in the "plugins" folder as well.<br>
+                    It would look something like this:<br>
+                    <em class="text-info">.../Server Folder/plugins/Rixor.jar</em><hr/>
+                    Lastly, place the 2 WorldEdit files "contrib" folder and WorldEdit.jar inside the "plugins" as well.<br>
+                    It would look something like this:<br>
+                    <em class="text-info">.../Server Folder/plugins/contrib/</em><br>
+                    <em class="text-info">.../Server Folder/plugins/WorldEdit.jar</em>
+                </p>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">3. Creating and adding to the maps repository</h1>
             </div>
             <div class="panel-body">
                 <p>
                     Before you can go any further, you must make sure that your Maps repository contains AT LEAST 1 map, without this the plugin will have a little cry and fail to load correctly.
-                    You can see the format of the repository <a href="https://maps.oc.tc/">here</a>. Those steps are pretty easy and no modifications should be needed to setup your server, as the map.xml is read just like PGM would!
-                    The maps repository should be a folder named 'maps' in the root of the server folder. (This is the same location as the server jar.)
                 </p>
-            </div>
-        </div>
-        
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h1 class="panel-title">3. To recap</h1>
-            </div>
-            <div class="panel-body">
                 <p>
-                Make sure to have a folder in your server root called <strong>libs</strong>. This is where you will put the <a href="http://scrimmage1.teamloading.com/dom4j.jar">dom4j</a> library that you can download from the website or from any one of the release tags. After this, download BarAPI from the release tag and include it in your plugins folder as a plugin. Next, make sure to have a <strong>maps</strong> folder where you will put the map and the xml. Make sure the xml file is inside of the map folder, where you see the region folder and the level.dat. Oh, and don't forget the actual Rixor plugin, which you can download from the release section, as always
+                    The format of the folder should be <em class="text-info">.../Server Folder/maps/{MAP FOLDER}/</em><br> So if I wanted to use RFV2 then it would be <em class="text-info">.../Server Folder/maps/RFV2/</em>
+                </p>
+                <p>
+                    Also make sure that there is a map.xml located in the map folder that would look something like this.<br>
+                    .../Server Folder/maps/{MAP FOLDER}/map.xml<br>
+                    So if I wanted to use RFV2 then it would be <em class="text-info">.../Server Folder/maps/RFV2/map.xml</em>
                 </p>
             </div>
         </div>
@@ -110,6 +132,21 @@
                 <p>
                 Your config.yml (<em class="text-info">/plugins/Rixor/config.yml</em>) should look like this:</p>
                     <pre>team: TeamName<br/>rotation:<br/>- Map 1<br/>- Map 2<br/>- Map 3<br/></pre>
+            </div>
+        </div>
+      
+      <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title">5. To recap</h1>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Your server folder should look something like this (The maps in the <em>maps</em> folder can be different):<hr/>
+                    <img src="img/Example.png" class="img-thumbnail"><hr/>
+                    <strong class="text-danger">Make sure that your maps have a map.xml file!</strong><br/>
+                    It's okay if some folders are missing, they will be automatically generated once you start up the server.<br/>
+                    Also don't worry about the "world" folder, it's not going to be loaded.
+                </p>
             </div>
         </div>
         
