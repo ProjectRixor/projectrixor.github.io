@@ -62,7 +62,25 @@
                 <h1 class="panel-title">Rixor Docs</h1>
             </div>
             <div class="panel-body">
-                <strong>WIP</strong>
+                <h2>Events</h2>
+                <hr>
+                <h3>PlayerChatEvent <em><h4>Cancellable: YES</h4></em></h3>
+                <p><strong>Client</strong> getClient() - returns the Client that sent</p>
+                <p><strong>String</strong> getMessage() - returns the message that was sent</p>
+                <br>
+                <h3>BlockChangeEvent <em><h4>Cancellable: YES</h4></em></h3>
+                <p><strong>Event</strong> getCause() - returns the Bukkit event that caused this event to fire</p>
+                <p><strong>Map</strong> getMap() - returns the map that the event occured in</p>
+                <p><strong>Client</strong> getClient() - returns the Client that caused this event</p>
+                <p><strong>BlockState</strong> getOldState() - returns the old state of the Block</p>
+                <p><strong>BlockState</strong> getNewState() - returns the new state of the Block</p>
+                <br>
+                <h3>PlayerDiedEvent <em><h4>Cancellable: NO</h4></em></h3>
+                <p><strong>Map</strong> getMap() - returns the map that the player died in</p>
+                <p><strong>Player</strong> getKiller() - returns the killer</p>
+                <p><strong>Player</strong> getKilled() - returns the person that was killed</p>
+                <br>
+
             </div>
         </div>
     </div><!-- /Main container -->
