@@ -47,6 +47,7 @@
             <li rel="tooltip" data-placement="bottom" title="How to setup Rixor"><a href="Tutorial.html"><i class="fa fa-info-circle"></i> Tutorial</a></li>
             <li rel="tooltip" data-placement="bottom" title="Full Rixor Documentation"><a href="Docs.html"><i class="fa fa-book"></i> Docs</a></li>
             <li rel="tooltip" data-placement="bottom" title="View Code"><a href="https://github.com/ProjectRixor/Rixor"><i class="fa fa-code"></i> Code</a></li>
+            <li id="dl" style="display:none;"></li>
             </ul>
             <p class="navbar-text navbar-right"><a href="https://github.com" class="navbar-link"><i class="fa fa-github"></i> Github</a></p>
             <p></p>
@@ -81,5 +82,24 @@
             </div>
         </div>
     </div><!-- /Main container -->
+      <script type="text/javascript">
+            jQuery.extend({
+                getValues: function(url) {
+                    $.ajax({
+                        url: url,
+                        type: 'get',
+                        dataType: 'JSON',
+                        async: false,
+                        success: function(data) {
+                            result = data;
+                        }
+                    });
+                    return result;
+                }
+            });
+            $.getValues("https://api.github.com/repos/ProjectRixor/Rixor/releases");
+            var dlbtn = '<li rel="tooltip" data-placement="bottom" title="'+result[0].name+'"><a href="'+result[0].html_url+'" target="blank"><i class="fa fa-cloud-download"></i> Download</a></li>';
+            window.document.getElementById('dl').outerHTML=dlbtn;
+        </script>
   </body>
 </html>
