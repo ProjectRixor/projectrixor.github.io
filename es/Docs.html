@@ -8,15 +8,10 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/6866854?s=35">
     <title>Rixor | Docs</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
-    <style>
-    body {
-        background-color: #F5F5F5;
-    }  
-    </style>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
     <script type='text/javascript'>
         $(document).ready(function () {
          if ($("[rel=tooltip]").length) {
@@ -43,10 +38,10 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="divider"></li>
-            <li rel="tooltip" data-placement="bottom" title="Main Site"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-            <li rel="tooltip" data-placement="bottom" title="How to setup Rixor"><a href="Tutorial.html"><i class="fa fa-info-circle"></i> Tutorial</a></li>
-            <li class="active" rel="tooltip" data-placement="bottom" title="Full Rixor Documentation"><a href="Docs.html"><i class="fa fa-book"></i> Docs</a></li>
-            <li rel="tooltip" data-placement="bottom" title="View Code"><a href="https://github.com/ProjectRixor/Rixor"><i class="fa fa-code"></i> Code</a></li>
+            <li rel="tooltip" data-placement="bottom" title="Main Site"><a href="index.html"><i class="fa fa-home"></i> Inicio</a></li>
+            <li rel="tooltip" data-placement="bottom" title="Cómo instalar Rixor"><a href="Tutorial.html"><i class="fa fa-info-circle"></i> Tutorial</a></li>
+            <li class="active" rel="tooltip" data-placement="bottom" title="Toda la documentación de Rixor"><a href="Docs.html"><i class="fa fa-book"></i> Documentación</a></li>
+            <li rel="tooltip" data-placement="bottom" title="Ver Código"><a href="https://github.com/ProjectRixor/Rixor"><i class="fa fa-code"></i> Código</a></li>
             <li id="dl" style="display:none;"></li>
             </ul>
             <p class="navbar-text navbar-right"><a href="https://github.com" class="navbar-link"><i class="fa fa-github"></i> Github</a></p>
@@ -54,6 +49,14 @@
         </div>
       </div>
     </div>
+        
+        <div class="btn-group btn-group-justified">
+              <a class="btn btn-default" href="../Docs.html">English</a>
+              <a class="btn btn-primary disabled" disabled href="#">Español</a>
+          </div>
+          
+        <hr/>
+        
     <!--Navbar End / Start of the content-->
         <div class="alert alert-info">
             <p><strong><i class="fa fa-info-circle"></i></strong> The Docs are under construction! You should read the official <a href="http://docs.oc.tc">OverCast Documentation</a></p>
@@ -108,7 +111,7 @@
                 }
             });
             $.getValues("https://api.github.com/repos/ProjectRixor/Rixor/releases");
-            var dlbtn = '<li rel="tooltip" data-placement="bottom" title="'+result[0].name+'"><a href="'+result[0].html_url+'" target="blank"><i class="fa fa-cloud-download"></i> Download</a></li>';
+            var dlbtn = '<li rel="tooltip" data-placement="bottom" title="'+result[0].name+'"><a href="'+result[0].html_url+'" target="blank"><i class="fa fa-cloud-download"></i> Descargar</a></li>';
             window.document.getElementById('dl').outerHTML=dlbtn;
         </script>
   </body>
