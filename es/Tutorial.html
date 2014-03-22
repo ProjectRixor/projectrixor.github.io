@@ -8,15 +8,10 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/6866854?s=35">
     <title>Rixor | Tutorial</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
-    <style>
-    body {
-        background-color: #F5F5F5;
-    }  
-    </style>
+    <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
     <script type='text/javascript'>
         $(document).ready(function () {
          if ($("[rel=tooltip]").length) {
@@ -54,6 +49,14 @@
         </div>
       </div>
     </div>
+        
+        <div class="btn-group btn-group-justified">
+              <a class="btn btn-default" href="../Tutorial.html">English</a>
+              <a class="btn btn-primary disabled" disabled href="#">Español</a>
+          </div>
+          
+        <hr/>
+        
     <!--Navbar End / Start of the content-->
         <div class="alert alert-warning">
         <p><strong><i class="fa fa-exclamation-circle"></i> Importante</strong> Rixor requiere Java 7!</p>
@@ -143,7 +146,7 @@
             <div class="panel-body">
                 <p>
                     Tu Directorio del Servidor debería verse así: (los mapas en el <em>Directorio de mapas</em> pueden ser diferentes):<hr/>
-                    <img src="img/Example.png" class="img-thumbnail"><hr/>
+                    <img src="../img/Example.png" class="img-thumbnail"><hr/>
                     <strong class="text-danger">Recuerde tener un archivo map.xml</strong><br/>
                     Está todo listo, si alguna carpeta no está, cuando cargue el servidor (lo encienda) deberían aparecer.<br/>
                     También no se preocupe por la carpeta "world", ésta no será cargada.
@@ -180,7 +183,7 @@
                 }
             });
             $.getValues("https://api.github.com/repos/ProjectRixor/Rixor/releases");
-            var dlbtn = '<li rel="tooltip" data-placement="bottom" title="'+result[0].name+'"><a href="'+result[0].html_url+'" target="blank"><i class="fa fa-cloud-download"></i> Download</a></li>';
+            var dlbtn = '<li rel="tooltip" data-placement="bottom" title="'+result[0].name+'"><a href="'+result[0].html_url+'" target="blank"><i class="fa fa-cloud-download"></i> Descargar</a></li>';
             window.document.getElementById('dl').outerHTML=dlbtn;
         </script>
   </body>
